@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flying Birds</title>
+    <link rel="stylesheet" href="/assest/src/fontawesome.css" />
+    <link rel="stylesheet" href="/assest/src/input.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="/assest/src/tailwind.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/assest/img/faviconio.jpg" />
+  </head>
+
+  <body class="m-0 font-semibold font-family p-0">
+    <div class="font-style">
+      <header
+        class="fixed bray-backgound w-full z-30 shadow-2xl rounded-b-3xl bg-[#eef1f4]"
+        id="myHeader"
+      >
+        <div class="" id="shadow">
+          <div class="mx-auto w-11/12 flex flex-wrap md:flex-row items-center">
+            <div class="w-full flex sm:mx-4 justify-between">
+              <div class="sm:p-2 ml-2 sm:ml-0 p-0 md:w-1/5 w-2/5 self-center">
+                <a href="./index.html" class="title-font">
+                  <img
+                    src="/assest/img/flyingBird.svg"
+                    id="logoImg"
+                    class="logo_img opacity-100 sm:p-2 p-0"
+                  />
+                </a>
+              </div>
+              <nav
+                class="nav navigation hidden p-2 w-3/5 justify-evenly lg:p-4 text-xl md:flex font-medium flex-col md:flex-row items-center"
+                id="menuItems"
+              >
+                <div class="">
+                  <a href="./about.html" class="whitespace-nowrap">
+                    About Us
+                    <div class="nav1"></div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="./testpreparation.html"
+                    id="prepare"
+                    class="whitespace-nowrap"
+                  >
+                    Test Preparation
+                    <div class="nav1"></div>
+                  </a>
+                </div>
+                <div>
+                  <a href="./country.html" class="whitespace-nowrap">
+                    Country
+                    <div class="nav1"></div>
+                  </a>
+                </div>
+                <div>
+                  <a href="./contact.html" class="whitespace-nowrap">
+                    Contact Us
+                    <div class="nav1"></div>
+                  </a>
+                </div>
+              </nav>
+              <div class="flex justify-end hidden" id="inquery">
+                <div class="inquiry p-4">
+                  <div>
+                    <h3 class="text-xl font-bold flex justify-center">
+                      VIRTUAL INQUIRY
+                    </h3>
+                    <p class="text-sm font-semibold">
+                      For Online Classes/ Visa Counseling
+                    </p>
+                  </div>
+                  <form>
+                    <div class="flex flex-col">
+                      <div class="flex my-1">
+                        <label for="name">Name</label>
+                        <input
+                          type="name"
+                          class="ml-3 w-full"
+                          placeholder="name"
+                        />
+                      </div>
+                      <div class="flex my-1">
+                        <label for="phone">Contact</label>
+                        <input
+                          type="phone"
+                          class="ml-3 w-full"
+                          class="inline-block"
+                          placeholder="phone"
+                        />
+                      </div>
+                      <div class="flex my-1">
+                        <label for="email">Email</label>
+                        <input
+                          type="email"
+                          class="ml-3 w-full"
+                          placeholder="email"
+                        />
+                      </div>
+                    </div>
+                    <div class="py-1">
+                      <label for="cars">PURPOSE OF INQUIRY:</label>
+                      <select name="cars" class="p-1" id="cars">
+                        <option value="volvo">COACHING</option>
+                        <option value="saab">5:00 – 5:30 PM</option>
+                        <option value="saab">5:30 – 6:00 PM</option>
+                        <option value="saab">6:00 – 6:30 PM</option>
+                      </select>
+                    </div>
+                    <div class="my-1">
+                      <p class="text-red font-normal text-xs">
+                        *CONDITIONS APPLICABLE*
+                      </p>
+                    </div>
+                    <div class="flex justify-end">
+                      <input
+                        type="submit"
+                        class="cursor-pointer"
+                        value="Submit"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="w-1/5">
+                <div
+                  class="inquiry-btn flex items-end justify-end my-inquiry-button px-2"
+                >
+                  <button
+                    class="sm:py-2 py-1 sm:text-xl text-base text-white my-5 sm:font-bold font-normal items-center rounded-3xl sm:px-6 px-3"
+                    onclick="inquery1()"
+                  >
+                    inquiry
+                  </button>
+                </div>
+                <div>
+                  <p
+                    class="hamburger fixed p-1 cursor-pointer z-50 h-8 w-8 md:hidden"
+                  >
+                    <i class="fa-solid fa-bars menuIcon material-icons"></i>
+                  </p>
+                  <p
+                    class="hamburger fixed p-1 cursor-pointer h-8 w-8 md:hidden hidden"
+                  >
+                    <i class="closeIcon material-icons"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul
+              class="menu bg-gray-200 flex flex-col sm:px-12 px-6 md:hidden fixed top-0 z-40 left-0 right-0 bottom-0 text-white list-none"
+            >
+              <a
+                href="./index.html"
+                class="hidden title-font font-semibold items-center md:mb-0 absalute"
+              >
+                <img
+                  src="/assest/img/Flying Bird International logo.png"
+                  class="hidden logo_img"
+                />
+              </a>
+              <i
+                class="fa-solid cross fa-xmark absolute text-2xl text-black"
+              ></i>
+              <div class="nav div mt-10 mx-4">
+                <li class="mb-2">
+                  <a
+                    class="menuItem text-lg font-semibold light-color"
+                    href="./about.html"
+                  >
+                    About us
+                    <div class="nav1"></div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    class="menuItem text-lg font-semibold light-color"
+                    href="./testpreparation.html"
+                  >
+                    Test Preparation
+                    <div class="nav1"></div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    class="menuItem text-lg font-semibold light-color"
+                    href="./country.html"
+                  >
+                    Country
+                    <div class="nav1"></div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    class="menuItem text-lg font-semibold light-color"
+                    href="./contact.html"
+                  >
+                    Contact us
+                    <div class="nav1"></div>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <ul
+        class="menu bg-gray-200 flex flex-col sm:px-12 px-6 md:hidden fixed top-0 z-40 left-0 right-0 bottom-0 text-white list-none"
+      >
+        <a
+          href="./index.html"
+          class="hidden title-font font-semibold items-center text_black_color md:mb-0 absalute"
+        >
+          <img
+            src="/assest/img/Flying Bird International logo.png"
+            class="hidden logo_img"
+          />
+        </a>
+        <i class="fa-solid cross fa-xmark absolute text-2xl text-black"></i>
+        <div class="nav div mt-10 mx-4">
+          <li class="mb-2">
+            <a
+              class="menuItem text-lg font-medium text_black_color text-black"
+              href="./about.html"
+            >
+              ABOUT US
+              <div class="nav1"></div>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              class="menuItem text-lg font-medium text_black_color text-black"
+              href="./testpreparation.html"
+            >
+              TEST PREPARATION
+              <div class="nav1"></div>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              class="menuItem text-lg font-medium text_black_color text-black"
+              href="./country.html"
+            >
+              COUNTRY
+              <div class="nav1"></div>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              class="menuItem text-lg font-medium text_black_color text-black"
+              href="./contact.html"
+            >
+              CONTACT US
+              <div class="nav1"></div>
+            </a>
+          </li>
+        </div>
+      </ul>
+      <p class="hamburger fixed p-1 cursor-pointer z-50 h-8 w-8 md:hidden">
+        <i class="fa-solid fa-bars menuIcon material-icons"></i>
+      </p>
+      <p class="hamburger fixed p-1 cursor-pointer h-8 w-8 md:hidden hidden">
+        <i class="closeIcon material-icons"></i>
+      </p>
+    </div>
+
+    <section class="text-gray-600 lg:block hidden mx-auto max-w-6xl">
+      <div class="mx-auto px-5 pt-32 items-center max-w-6xl">
+        <div class="flex m-auto flex-col justify-center items-center">
+          <div class="slide-out from-right1">
+            <img src="/assest/img/about-main.svg" class="mx-auto max-" alt="" />
+
+            <p class="light-color sm:text-2xl text-xl max-w-6xl mx-auto">
+              Flying Bird International assists you to untie all your mingled
+              threads in your head so that you are in a clear state of mind to
+              take right decisions for your academic future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="text-black text-xl font-semibold body-font max-w-6xl mx-auto"
+    >
+      <div class="pb-16 mt-auto">
+        <div class="flex containers m-auto flex-wrap">
+          <div class="block justify-center rounded md:flex">
+            <div class="text-xl">
+              <div class="slide-in from-right">
+                <div
+                  class="h-full text-white flex justify-center items-center text-center text-3xl px-8 py-4 rounded"
+                >
+                  <div
+                    class="flex items-center sm:w-10/12 w-full mx-auto mb-1 mt-6"
+                  >
+                    <span
+                      class="flex-grow h-1 border-line-left bg-gray-400"
+                    ></span>
+                    <h3
+                      class="sm:text-4xl text-3xl font-medium text-center light-color pb-2 mx-2"
+                    >
+                      Who we are?
+                    </h3>
+                    <span
+                      class="flex-grow h-1 border-line-right bg-gray-400"
+                    ></span>
+                  </div>
+                </div>
+                <div class="h-full px-8 pb-8 rounded mx-1">
+                  <ol class="list-disc">
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      <b class="text_black_color">Flying Bird International</b>
+                      is a platform that supports you to accomplish your dream
+                      of overseas education or migration abroad.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      We do possess experience & expertise in
+                      <b class="text_black_color">
+                        Coaching and Visa Consultancy
+                      </b>
+                      across major countries that candidates wish to go.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      We offer guidance right from scratch.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      We start your journey from your counselling and then
+                      simultaneously help you with numerous options available to
+                      study abroad, matching your wish list and current academic
+                      qualifications.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      The core of foreign education is to qualify for tests such
+                      as
+                      <b class="text_black_color">IELTS, PTE,</b>
+                      and
+                      <b class="text_black_color">TOEFL</b>
+                      with flying colours.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      This is where we are the strongest. We deeply understand
+                      the importance of good scores in such exams required to
+                      study abroad.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      We assure you a
+                      <b class="text_black_color">one-stop solution</b>
+                      covering each & every aspect of your study abroad,
+                      moreover you will have magnificent experience associating
+                      with us.
+                    </li>
+                    <li
+                      class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                    >
+                      We are eagerly waiting to be your
+                      <b class="text_black_color">support system</b>
+                      in your journey to study abroad at your preferred
+                      destination.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:flex block containers m-auto">
+            <div class="py-4 pr-2 lg:w-1/2 w-full text-center sm:text-left">
+              <div
+                class="h-full flex justify-center items-center flex-col px-8 rounded"
+              >
+                <div class="flex items-center sm:w-10/12 w-full mx-auto">
+                  <span class="flex-grow border-line-left bg-gray-400"></span>
+                  <h3
+                    class="sm:text-5xl text-4xl font-medium text-center light-color pb-2 mx-2"
+                  >
+                    Vision
+                  </h3>
+                  <span class="flex-grow border-line-right bg-gray-400"></span>
+                </div>
+                <p
+                  class="leading-relaxed text-center sm:text-3xl text-2xl font-normal light-color"
+                >
+                  To accomplish people’s dream wishing overseas education &
+                  migration.
+                </p>
+              </div>
+            </div>
+            <div class="py-4 pl-2 lg:w-1/2 w-full text-center sm:text-left">
+              <div
+                class="flex justify-center items-center flex-col px-8 rounded"
+              >
+                <div class="flex items-center sm:w-10/12 w-full mx-auto">
+                  <span class="flex-grow border-line-left bg-gray-400"></span>
+                  <h3
+                    class="sm:text-5xl text-4xl font-medium text-center light-color pb-2 mx-2"
+                  >
+                    Mission
+                  </h3>
+                  <span class="flex-grow border-line-right bg-gray-400"></span>
+                </div>
+                <p
+                  class="leading-relaxed text-center sm:text-3xl text-2xl font-normal light-color"
+                >
+                  By preparing you in every aspect required to build your life
+                  abroad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="body-font mt-5 w-full mx-auto">
+      <div class="mx-auto">
+        <div
+          class="w-full relative sm:flex block justify-between px-4 pt-4 footer"
+        >
+          <div class="ml-0 w-1/3 text-center">
+            <h2 class="title-font font-bold m-2">
+              <strong>FLYING BIRD</strong>
+              INTERNATIONAL
+            </h2>
+            <p class="mt-2 text-lg">
+              1036-37-38, 3rd Floor, West Field Shopping Center,
+              <br />
+              Opp. Surya Kiran Copmlex, Ghod Dod Road, City-Surat
+            </p>
+            <p class="text-lg">
+              Pincode - 395007, State-Gujarat, India.
+            </p>
+          </div>
+          <div class="1/3">
+            <img
+              class="w-96 h-32"
+              src="./assest/img//Flying Bird International logo.png"
+              alt=""
+            />
+          </div>
+
+          <div class="ml-0 w-1/3 flex flex-col justify-center items-center">
+            <div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="tel:+91 99798 48781 "
+                  class="leading-relaxed text-lg text-black ml-2"
+                >
+                  +91 99798 48781
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="tel:+91 99798 48782 "
+                  class="leading-relaxed text-lg text-black ml-2"
+                >
+                  +91 99798 48782
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="tel:+91 99798 48783 "
+                  class="leading-relaxed text-lg text-black ml-2"
+                >
+                  +91 99798 48783
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-envelope title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="mailto:flyingbirdsurat@gmail.com "
+                  class="text-black text-lg leading-relaxed ml-2"
+                >
+                  flyingbirdsurat@gmail.com
+                </a>
+              </div>
+              <div class="my-2 mx-4 flex justify-between">
+                <img src="./assest/img/in.svg" alt="" />
+                <img src="./assest/img/youtube.svg" alt="" />
+                <img src="./assest/img/instagram.svg" alt="" />
+                <img src="./assest/img/facebook.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-center py-2 footer-bg">
+          ©
+          <span id="year"></span>
+          FLYING BIRD —
+          <a class="ml-1" target="_blank" rel="noopener noreferrer">
+            @flyingbirdsurat
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script src="/assest/js/index.js "></script>
+    <script src="/assest/js/about.js "></script>
+    <script>
+      const date = new Date()
+      let year = date.getFullYear()
+      document.getElementById('year').innerHTML = year
+    </script>
+  </body>
+</html>

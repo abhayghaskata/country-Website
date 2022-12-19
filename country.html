@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flying Birds / TestPreparation</title>
+    <link rel="stylesheet" href="/assest/src/tailwind.css" />
+    <link rel="stylesheet" href="/assest/src/input.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="/assest/src/tailwind.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/assest/img/faviconio.jpg" />
+  </head>
+
+  <body class="font-style">
+    <header
+      class="fixed bray-backgound w-full z-30 shadow-2xl rounded-b-3xl bg-[#eef1f4]"
+      id="myHeader"
+    >
+      <div class="" id="shadow">
+        <div class="mx-auto w-11/12 flex flex-wrap md:flex-row items-center">
+          <div class="w-full flex sm:mx-4 justify-between">
+            <div class="sm:p-2 ml-2 sm:ml-0 p-0 md:w-1/5 w-2/5 self-center">
+              <a href="./index.html" class="title-font">
+                <img
+                  src="/assest/img/flyingBird.svg"
+                  id="logoImg"
+                  class="logo_img opacity-100 sm:p-2 p-0"
+                />
+              </a>
+            </div>
+            <nav
+              class="nav navigation hidden p-2 w-3/5 justify-evenly lg:p-4 text-xl md:flex font-medium flex-col md:flex-row items-center"
+              id="menuItems"
+            >
+              <div class="">
+                <a href="./about.html" class="whitespace-nowrap">
+                  About Us
+                  <div class="nav1"></div>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="./testpreparation.html"
+                  id="prepare"
+                  class="whitespace-nowrap"
+                >
+                  Test Preparation
+                  <div class="nav1"></div>
+                </a>
+              </div>
+              <div>
+                <a href="./country.html" class="whitespace-nowrap">
+                  Country
+                  <div class="nav1"></div>
+                </a>
+              </div>
+              <div>
+                <a href="./contact.html" class="whitespace-nowrap">
+                  Contact Us
+                  <div class="nav1"></div>
+                </a>
+              </div>
+            </nav>
+            <div class="flex justify-end hidden" id="inquery">
+              <div class="inquiry p-4">
+                <div>
+                  <h3 class="text-xl font-bold flex justify-center">
+                    VIRTUAL INQUIRY
+                  </h3>
+                  <p class="text-sm font-semibold">
+                    For Online Classes/ Visa Counseling
+                  </p>
+                </div>
+                <form>
+                  <div class="flex flex-col">
+                    <div class="flex my-1">
+                      <label for="name">Name</label>
+                      <input
+                        type="name"
+                        class="ml-3 w-full"
+                        placeholder="name"
+                      />
+                    </div>
+                    <div class="flex my-1">
+                      <label for="phone">Contact</label>
+                      <input
+                        type="phone"
+                        class="ml-3 w-full"
+                        class="inline-block"
+                        placeholder="phone"
+                      />
+                    </div>
+                    <div class="flex my-1">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        class="ml-3 w-full"
+                        placeholder="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="py-1">
+                    <label for="cars">PURPOSE OF INQUIRY:</label>
+                    <select name="cars" class="p-1" id="cars">
+                      <option value="volvo">COACHING</option>
+                      <option value="saab">5:00 – 5:30 PM</option>
+                      <option value="saab">5:30 – 6:00 PM</option>
+                      <option value="saab">6:00 – 6:30 PM</option>
+                    </select>
+                  </div>
+                  <div class="my-1">
+                    <p class="text-red font-normal text-xs">
+                      *CONDITIONS APPLICABLE*
+                    </p>
+                  </div>
+                  <div class="flex justify-end">
+                    <input
+                      type="submit"
+                      class="cursor-pointer"
+                      value="Submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="w-1/5">
+              <div
+                class="inquiry-btn flex items-end justify-end my-inquiry-button px-2"
+              >
+                <button
+                  class="sm:py-2 py-1 sm:text-xl text-base text-white my-5 sm:font-bold font-normal items-center rounded-3xl sm:px-6 px-3"
+                  onclick="inquery1()"
+                >
+                  inquiry
+                </button>
+              </div>
+              <div>
+                <p
+                  class="hamburger fixed p-1 cursor-pointer z-50 h-8 w-8 md:hidden"
+                >
+                  <i class="fa-solid fa-bars menuIcon material-icons"></i>
+                </p>
+                <p
+                  class="hamburger fixed p-1 cursor-pointer h-8 w-8 md:hidden hidden"
+                >
+                  <i class="closeIcon material-icons"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <ul
+            class="menu bg-gray-200 flex flex-col sm:px-12 px-6 md:hidden fixed top-0 z-40 left-0 right-0 bottom-0 text-white list-none"
+          >
+            <a
+              href="./index.html"
+              class="hidden title-font font-semibold items-center md:mb-0 absalute"
+            >
+              <img
+                src="/assest/img/Flying Bird International logo.png"
+                class="hidden logo_img"
+              />
+            </a>
+            <i class="fa-solid cross fa-xmark absolute text-2xl text-black"></i>
+            <div class="nav div mt-10 mx-4">
+              <li class="mb-2">
+                <a
+                  class="menuItem text-lg font-semibold light-color"
+                  href="./about.html"
+                >
+                  About us
+                  <div class="nav1"></div>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  class="menuItem text-lg font-semibold light-color"
+                  href="./testpreparation.html"
+                >
+                  Test Preparation
+                  <div class="nav1"></div>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  class="menuItem text-lg font-semibold light-color"
+                  href="./country.html"
+                >
+                  Country
+                  <div class="nav1"></div>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  class="menuItem text-lg font-semibold light-color"
+                  href="./contact.html"
+                >
+                  Contact us
+                  <div class="nav1"></div>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="max-w-6xl mx-auto">
+      <div class="">
+        <div class="h-full">
+          <div class="Scriptcontent">
+            <div class="mx-auto">
+              <div class="article js-sidebar-holder">
+                <div class="float-right slide-in w-full py-20">
+                  <div class="mx-auto">
+                    <!-- %%%%%%%%%%%%%%%%% slider %%%%%%%%%%%%%%%%%%  -->
+                    <div class="slider relative pt-10">
+                      <input type="radio" name="testimonial" id="t-1" />
+                      <input type="radio" name="testimonial" id="t-2" />
+                      <input type="radio" name="testimonial" id="t-3" checked />
+                      <input type="radio" name="testimonial" id="t-4" />
+                      <input type="radio" name="testimonial" id="t-5" />
+                      <i
+                        class="fa-solid fa-chevron-left absolute slide-left max-[468px]:opacity-100 hover:bg-gray-300"
+                      ></i>
+                      <i
+                        class="fa-solid fa-chevron-right absolute slide-right max-[468px]:opacity-100 hover:bg-gray-300"
+                      ></i>
+                      <div
+                        class="testimonials lg:max-w-6xl sm:max-w-3xl mx-auto"
+                      >
+                        <label class="item" for="t-1">
+                          <input type="radio" name="testimonial" id="t-1" />
+                          <li
+                            id="canadacountry"
+                            class="hover_effect flex justify-center items-center country-image"
+                            onclick="openCity3()"
+                          >
+                            <img
+                              alt="team "
+                              class="object-cover cursor-pointer"
+                              src="/assest/img/canada.svg"
+                            />
+                          </li>
+                        </label>
+
+                        <label class="item" for="t-2">
+                          <input type="radio" name="testimonial" id="t-2" />
+                          <li
+                            id="australiacountry "
+                            class="hover_effect flex justify-center items-center country-image"
+                            onclick="openCity2()"
+                          >
+                            <img
+                              alt="team "
+                              class="object-cover cursor-pointer"
+                              src="/assest/img/aus.svg"
+                            />
+                          </li>
+                        </label>
+                        <label class="item" for="t-3">
+                          <input type="radio" name="testimonial" id="t-3" />
+                          <li
+                            id="usacountry"
+                            class="hover_effect flex justify-center items-center country-image"
+                            onclick="openCity1()"
+                          >
+                            <img
+                              alt="team"
+                              class="object-cover cursor-pointer"
+                              src="/assest/img/usa.svg"
+                            />
+                          </li>
+                        </label>
+                        <label class="item" for="t-4">
+                          <input type="radio" name="testimonial" id="t-4" />
+                          <li
+                            id="newzealandcountry"
+                            class="hover_effect flex justify-center items-center country-image"
+                            onclick="openCity4()"
+                          >
+                            <img
+                              alt="team"
+                              class="object-cover cursor-pointer"
+                              src="/assest/img/nz.svg"
+                            />
+                          </li>
+                        </label>
+                        <label class="item" for="t-5">
+                          <input type="radio" name="testimonial" id="t-5" />
+                          <li
+                            id="ukcountry"
+                            class="hover_effect flex justify-center items-center country-image"
+                            onclick="openCity5()"
+                          >
+                            <img
+                              alt="team"
+                              class="object-cover cursor-pointer"
+                              src="/assest/img/uk.svg"
+                            />
+                          </li>
+                        </label>
+                      </div>
+                      <div class="dots hidden">
+                        <label for="t-1"></label>
+                        <label for="t-2"></label>
+                        <label for="t-3"></label>
+                        <label for="t-4"></label>
+                        <label for="t-5"></label>
+                      </div>
+                    </div>
+
+                    <div class="justify-start" id="coutry">
+                      <div class="block">
+                        <div class="article-section tabcontent block" id="usa">
+                          <div class="">
+                            <div
+                              class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                              onclick="why_country_usa_1()"
+                            >
+                              <h3 class="">
+                                Why USA?
+                              </h3>
+                              <i
+                                id="chevron1"
+                                class="fa-solid fa-chevron-down self-center chevron-down"
+                              ></i>
+                            </div>
+                          </div>
+
+                          <div class="hidden" id="why_country1">
+                            <div class="article-text">
+                              <div>
+                                <ol class="list-disc ml-8 mr-2">
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    This country comprises of world class
+                                    universities offering good quality education
+                                    in niche subjects.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Excellent for research and technological
+                                    development.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    USA has many options for students with
+                                    average profile.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    The Strongest economy. More than 1/5th of
+                                    global fortune 500 companies originate from
+                                    USA.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Scholarship opportunities in 1 of the
+                                    costliest areas to study.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Work along with study option available so
+                                    does not need to depend on family or loan
+                                    for at least living expenses.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Research opportunities available related to
+                                    niche segments of various subjects.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Academic flexibility: students are given
+                                    opportunity to explore through wide spectrum
+                                    of subjects during their course of study.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    System is not rigid about majors and minors.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Good and multilingual campus life.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    High standard of living.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Globally recognized degree.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Higher package when you want to pursue your
+                                    career in your home country as compared to
+                                    your peers.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Also possible to go without IELTS.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="entry_req_usa_1()"
+                          >
+                            <h3>
+                              Entry Requirements
+                            </h3>
+                            <i
+                              id="chevron2"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                          <div class="hidden" id="entry_req1">
+                            <div class="article-text">
+                              <ol class="list-disc ml-8 mr-2">
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  12 Years of primary and secondary education.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  For undergraduate courses a minimum of 60% in
+                                  12th is required for diploma, whereas, for
+                                  bachelor’s a minimum of 65% is required in
+                                  12th.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Entry requirements may vary depending on the
+                                  programme chosen and desired university or
+                                  college.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  IELTS 6 Bands overall with a minimum of 5.5
+                                  bands in each module opens a lot of options
+                                  for university and course selection.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Sufficient funds and its evidence are required
+                                  for payment of tuition fees and living
+                                  expenses of country for a year.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="visa_process_usa_1() "
+                          >
+                            <h3>
+                              Admisision & Visa Process
+                            </h3>
+                            <i
+                              id="chevron3"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+
+                          <div class="hidden" id="visa_process1">
+                            <div class="article-text">
+                              <div class="text_black_color body-font py-8">
+                                <div class="containers mx-auto">
+                                  <div
+                                    class="flex flex-wrap -m-4 items-baseline"
+                                  >
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/academic.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          IELTS ACADEMIC/ GENERAL TRAINING
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/university.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          UNIVERSITY SHORTLISTING
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/apply.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          APPLY TO UNIVERSITY
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/arrangment.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          ARRANGEMENT OF FUNDS & DOCUMENTATION
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/application.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          APPLICATION ACCEPTED
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/document.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          I20 DOCUMENTATION
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/visa.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          VISA APPLICATION
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/visa-interview.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          VISA INTERVIEW
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/3 p-6">
+                                      <div class="h-full rounded-lg">
+                                        <img
+                                          class="mx-auto"
+                                          src="./assest/img/visa-outcome.svg"
+                                          alt=""
+                                        />
+                                        <p class="py-4 text-2xl text-center">
+                                          VISA OUTCOME BY EMBASSY & FLY TO USA
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="article-sectio hidden tabcontent" id="aus">
+                        <div class="">
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="why_country_aus_2()"
+                          >
+                            <h3>
+                              Why AUSTRALIA?
+                            </h3>
+                            <i
+                              id="chevron4"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="hidden" id="why_country2">
+                            <div class="article-text">
+                              <div>
+                                <ol class="list-disc ml-8 mr-2">
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    This country offers education by usage of
+                                    Advance technology styles.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Plethora of specialist institutions
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Quality of scientific research
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Global acceptance of Australian higher
+                                    education standards.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Multicultural community
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Unique travel choices
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Innovation driven country
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Government actively regulating education
+                                    system to ensure quality of education
+                                    provided to match with industry standards.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Opportunity for permanent residence.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    8/100 top universities in the world are
+                                    Australian.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    No application fees in major universities.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Flexibility in terms of deadlines.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Low entry requirements with relatively
+                                    higher international rankings.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="entry_req_aus_2()"
+                          >
+                            <h3>
+                              Entry Requirements
+                            </h3>
+                            <i
+                              id="chevron5"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                          <div class="hidden" id="entry_req2">
+                            <div class="article-text">
+                              <ol class="list-disc ml-8 mr-2">
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  12 Years of primary and secondary education.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  For undergraduate courses a minimum of 60% in
+                                  12th is required for diploma, whereas, for
+                                  bachelor’s a minimum of 65% is required in
+                                  12th.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Entry requirements may vary depending on the
+                                  programme chosen and desired university or
+                                  college.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  IELTS 6 Bands overall with a minimum of 5.5
+                                  bands in each module opens a lot of options
+                                  for university and course selection.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Sufficient funds and its evidence are required
+                                  for payment of tuition fees and living
+                                  expenses of country for a year.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="visa_process_aus_2()"
+                          >
+                            <h3>
+                              Process
+                            </h3>
+                            <i
+                              id="chevron6"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                          <div class="hidden" id="visa_process2">
+                            <div class="article-text">
+                              <div class="article-text">
+                                <div class="text_black_color body-font">
+                                  <div class="containers px-5 py-24 mx-auto">
+                                    <div class="flex flex-wrap -m-4">
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            1. IELTS ACADEMIC/GENERAL TRAINING
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            2. APPLICATION FOR OFFER LETTER
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            3. GTE INTERVIEW & FINANCE APPROVAL
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            4. CONFIRMATION OF ENROLLMENT (COE)
+                                            & OHSL
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            5. VISA APPLICATION
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            6. MEDICAL CHECKUP
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="xl:w-1/3 md:w-1/3 p-4">
+                                        <div
+                                          class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                        >
+                                          <p class="leading-relaxed text-base">
+                                            7. VISA OUTCOME BY EMBASSY & FLY TO
+                                            AUSTRALIA
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="article-section hidden tabcontent"
+                        id="canada"
+                      >
+                        <div class="">
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="why_country_canada_3()"
+                          >
+                            <h3>
+                              Why CANADA?
+                            </h3>
+                            <i
+                              id="chevron7"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="hidden" id="why_country3">
+                            <div class="article-text">
+                              <div>
+                                <ol class="list-disc ml-8 mr-2">
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    This country provides high quality education
+                                    irrespective of type of institution, college
+                                    or university.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Focus of education is on skill development
+                                    apart from just classroom study.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Co-op program up to 4 months gives students
+                                    competitive advantage.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Affordable as compared to other countries.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Earn while to learn by doing 20 hours a week
+                                    of part time work during study and 40 hours
+                                    a week during vacations.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Quality of life is safe and peaceful.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Cultural diversity
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Immigration opportunities
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Internationally recognized degree.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Post study work permit
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Excellent healthcare.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="entry_req_canada_3() "
+                          >
+                            <h3>
+                              Entry Requirements
+                            </h3>
+                            <i
+                              id="chevron8"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                          <div class="hidden" id="entry_req3">
+                            <div class="article-text">
+                              <ol class="list-disc ml-8 mr-2">
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  12 Years of primary and secondary education.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  For undergraduate courses a minimum of 60% in
+                                  12th is required for diploma, whereas, for
+                                  bachelor’s a minimum of 65% is required in
+                                  12th.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Entry requirements may vary depending on the
+                                  programme chosen and desired university or
+                                  college.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  IELTS 6 Bands overall with a minimum of 5.5
+                                  bands in each module opens a lot of options
+                                  for university and course selection.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Sufficient funds and its evidence are required
+                                  for payment of tuition fees and living
+                                  expenses of country for a year.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="visa_process_canada_3()"
+                          >
+                            <h3>
+                              Admisision & Visa Process
+                            </h3>
+                            <i
+                              id="chevron9"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+
+                          <div class="hidden" id="visa_process3">
+                            <div class="article-text">
+                              <div class="article-text">
+                                <div class="article-text">
+                                  <div class="text_black_color body-font">
+                                    <div class="containers px-5 py-24 mx-auto">
+                                      <div class="flex flex-wrap -m-4">
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              1. IELTS ACADEMIC/GENERAL TRAINING
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              2. ADMISSION Process
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              3. GIC APPLICATION
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              4. FINANCIAL DOCUMENTATION
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              5. TUTION FEES PAYMENT
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              6. GIC AMOUNT PAYMENT
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              7. MEDICAL EXAMINATION
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              8. VISA FORM FILING & SUBMISSION
+                                              OF DOCUMENTS
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              9. VISA OUTCOME BY EMBASSY & FLY
+                                              TO CANADA
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="article-section hidden flex justify-center tabcontent"
+                        id="newzealand"
+                      >
+                        <div class="">
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="why_country_newzealand_4()"
+                          >
+                            <h3>
+                              Why NEWZEALAND?
+                            </h3>
+                            <i
+                              id="chevron10"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="hidden" id="why_country4">
+                            <div class="article-text">
+                              <div>
+                                <ol class="list-disc ml-8 mr-2">
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Most peaceful and least corrupt countries
+                                    across the globe.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Universities offer personalized learning.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    High % of graduates finds jobs that are
+                                    relevant to their study background.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Has a lowest unemployment rate across the
+                                    globe.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    International recognition of their education
+                                    system and qualifications.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Affordable tuition fee
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Education system is number 1 in the world as
+                                    assessed by economist intelligence.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Fit for purpose in preparing students for
+                                    global career.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Curriculum is industry connected.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Lenient admission process.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="entry_req_newzealand_4()"
+                          >
+                            <h3>
+                              Entry Requirements
+                            </h3>
+                            <i
+                              id="chevron11"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+
+                          <div class="hidden" id="entry_req4">
+                            <div class="article-text">
+                              <ol class="list-disc ml-8 mr-2">
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  12 Years of primary and secondary education.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  For undergraduate courses a minimum of 60% in
+                                  12th is required for diploma, whereas, for
+                                  bachelor’s a minimum of 65% is required in
+                                  12th.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Entry requirements may vary depending on the
+                                  programme chosen and desired university or
+                                  college.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  IELTS 6 Bands overall with a minimum of 5.5
+                                  bands in each module opens a lot of options
+                                  for university and course selection.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Sufficient funds and its evidence are required
+                                  for payment of tuition fees and living
+                                  expenses of country for a year.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="visa_process_newzealand_4()"
+                          >
+                            <h3>
+                              Process
+                            </h3>
+                            <i
+                              id="chevron12"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+
+                          <div class="hidden" id="visa_process4">
+                            <div class="article-text">
+                              <div class="article-text">
+                                <div class="article-text">
+                                  <div class="text_black_color body-font">
+                                    <div class="containers px-5 py-24 mx-auto">
+                                      <div class="flex flex-wrap -m-4">
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              1. IELTS ACADEMIC/GENERAL TRAINING
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              2. APPLICATION TO UNIVERSITY
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              3. ACCEPT THE OFFER LETTER
+                                              RECEIVED
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              4. ARRANGE FINANCE & VISA
+                                              DOCUMENTS
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              5. RECEIVED APPROVAL IN PRINCIPLE
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              6. AIP WITH FTS
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              7. AIP WITHOUT FTS
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              8. Transfer Tuition Fee to
+                                              institution & living expenses to
+                                              ANZ account of student Provide
+                                              evidence of funds transfer & Get
+                                              Visa
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="xl:w-1/3 md:w-1/3 p-4">
+                                          <div
+                                            class="border border-gray-200 bg_color_gray h-full p-6 rounded-lg"
+                                          >
+                                            <p
+                                              class="leading-relaxed text-base"
+                                            >
+                                              9. Transfer Tuition Fee to
+                                              institution Provide evidence of
+                                              funds transfer & Get Visa
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="article-section hidden flex justify-between tabcontent w-full"
+                        id="uk"
+                      >
+                        <div class="">
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="why_country_uk_5()"
+                          >
+                            <h3>
+                              Why UNITED KINGDOM?
+                            </h3>
+                            <i
+                              id="chevron13"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="m-auto">
+                          <div class="hidden" id="why_country5">
+                            <div class="article-text">
+                              <div>
+                                <ol class="list-disc ml-8 mr-2">
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    World class education and academic
+                                    facilities.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Possible without IELTS.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Less costly as compared to education in USA.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Post study work visa up to 2 years.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-bold sm:leading-10 leading-8"
+                                  >
+                                    2 types of universities :
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color list-none sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    <strong>1.</strong>
+                                    Traditional universities: Focuses more on
+                                    RESEARCH.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color list-none sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    <strong>2.</strong>
+                                    Modern universities : Focusses more on
+                                    APPLIED LEARNING with excellent industry
+                                    tie-ups.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    This country provided programs with shorter
+                                    duration as compared to other countries.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    It is 2nd popular choice for students after
+                                    USA for international students.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    University education focuses more on depth
+                                    rather than width of chosen programme.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Helps to bridge gap between theory and
+                                    practice.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Offers sandwich courses, modular structured
+                                    courses, and accelerated courses.
+                                  </li>
+                                  <li
+                                    class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                  >
+                                    Students have liberty to tailor the program
+                                    in a way that suits their lifestyle and
+                                    future career aspirations.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="sm:text-3xl text-2xl px-4 my-8 flex justify-between font-medium text-start py-2 mx-2 contant-box light-color cursor-pointer"
+                            onclick="entry_req_uk_5()"
+                          >
+                            <h3>
+                              Entry Requirements
+                            </h3>
+                            <i
+                              id="chevron14"
+                              class="fa-solid fa-chevron-down self-center chevron-down"
+                            ></i>
+                          </div>
+
+                          <div class="hidden" id="entry_req5">
+                            <div class="article-text">
+                              <ol class="list-disc ml-8 mr-2">
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  12 Years of primary and secondary education.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  For undergraduate courses a minimum of 60% in
+                                  12th is required for diploma, whereas, for
+                                  bachelor’s a minimum of 65% is required in
+                                  12th.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Entry requirements may vary depending on the
+                                  programme chosen and desired university or
+                                  college.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  IELTS 6 Bands overall with a minimum of 5.5
+                                  bands in each module opens a lot of options
+                                  for university and course selection.
+                                </li>
+                                <li
+                                  class="mt-0 text-left word-space light-color sm:text-2xl text-xl font-normal sm:leading-10 leading-8"
+                                >
+                                  Sufficient funds and its evidence are required
+                                  for payment of tuition fees and living
+                                  expenses of country for a year.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      <div id="one"></div>
+    </div>
+    <footer class="body-font mt-5 w-full mx-auto">
+      <div class="mx-auto">
+        <div
+          class="w-full relative flex justify-between flex-row px-4 pt-4 footer"
+        >
+          <div class="ml-0 w-1/3 text-center">
+            <h2 class="title-font font-bold m-2">
+              <strong>FLYING BIRD</strong>
+              INTERNATIONAL
+            </h2>
+            <p class="mt-2 text-lg">
+              1036-37-38, 3rd Floor, West Field Shopping Center,
+              <br />
+              Opp. Surya Kiran Copmlex, Ghod Dod Road, City-Surat
+            </p>
+            <p class="text-lg">
+              Pincode - 395007, State-Gujarat, India.
+            </p>
+          </div>
+          <div class="1/3">
+            <img
+              class="w-96 h-32"
+              src="./assest/img//Flying Bird International logo.png"
+              alt=""
+            />
+          </div>
+
+          <div class="ml-0 w-1/3 flex flex-col justify-center items-center">
+            <div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="tel:+91 99798 48781 "
+                  class="leading-relaxed text-lg text-black ml-2"
+                >
+                  +91 99798 48781
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="tel:+91 99798 48782 "
+                  class="leading-relaxed text-lg text-black ml-2"
+                >
+                  +91 99798 48782
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="tel:+91 99798 48783 "
+                  class="leading-relaxed text-lg text-black ml-2"
+                >
+                  +91 99798 48783
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-envelope title-font font-semibold tracking-widest text-base flex justify-center items-center"
+                >
+                  :
+                </i>
+                <a
+                  href="mailto:flyingbirdsurat@gmail.com "
+                  class="text-black text-lg leading-relaxed ml-2"
+                >
+                  flyingbirdsurat@gmail.com
+                </a>
+              </div>
+              <div class="my-2 mx-4 flex justify-between">
+                <img src="./assest/img/in.svg" alt="" />
+                <img src="./assest/img/youtube.svg" alt="" />
+                <img src="./assest/img/instagram.svg" alt="" />
+                <img src="./assest/img/facebook.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-center py-2 footer-bg">
+          © 2022 FLYING BIRD —
+          <a class="ml-1" target="_blank" rel="noopener noreferrer">
+            @flyingbirdsurat
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script src="/assest/js/index.js "></script>
+    <script src="/assest/js/country.js "></script>
+  </body>
+</html>

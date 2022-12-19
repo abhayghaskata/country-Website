@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flying Birds / TestPreparation</title>
+  <link rel="stylesheet" href="/assest/src/input.css" />
+  <link rel="stylesheet" href="/assest/src/tailwind.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="/assest/img/faviconio.jpg" />
+</head>
+
+<body class="font-style">
+  <header class="fixed bray-backgound w-full z-30 shadow-2xl rounded-b-3xl bg-[#eef1f4]" id="myHeader">
+    <div class="" id="shadow">
+      <div class=" mx-auto w-11/12 flex flex-wrap md:flex-row items-center">
+        <div class="w-full flex sm:mx-4 justify-between">
+          <div class="sm:p-2 ml-2 sm:ml-0 p-0 md:w-1/5 w-2/5 self-center">
+            <a href="./index.html" class="title-font">
+              <img src="/assest/img/flyingBird.svg" id="logoImg" class="logo_img opacity-100 sm:p-2 p-0" />
+            </a>
+          </div>
+          <nav
+            class="nav navigation hidden p-2  w-3/5 justify-evenly lg:p-4 text-xl md:flex font-medium flex-col md:flex-row items-center "
+            id="menuItems">
+            <div class="">
+              <a href="./about.html" class="whitespace-nowrap ">
+                About Us
+                <div class="nav1"></div>
+              </a>
+            </div>
+            <div>
+              <a href="./testpreparation.html" id="prepare" class="whitespace-nowrap  ">
+                Test Preparation
+                <div class="nav1"></div>
+              </a>
+            </div>
+            <div>
+              <a href="./country.html" class="whitespace-nowrap ">
+                Country
+                <div class="nav1"></div>
+              </a>
+            </div>
+            <div>
+              <a href="./contact.html" class="whitespace-nowrap ">
+                Contact Us
+                <div class="nav1"></div>
+              </a>
+            </div>
+          </nav>
+          <div class="flex justify-end hidden" id="inquery">
+            <div class="inquiry p-4">
+              <div>
+                <h3 class="text-xl font-bold flex justify-center">
+                  VIRTUAL INQUIRY
+                </h3>
+                <p class="text-sm font-semibold">
+                  For Online Classes/ Visa Counseling
+                </p>
+              </div>
+              <form>
+                <div class="flex flex-col">
+                  <div class="flex my-1">
+                    <label for="name">Name</label>
+                    <input type="name" class="ml-3 w-full" placeholder="name" />
+                  </div>
+                  <div class="flex my-1">
+                    <label for="phone">Contact</label>
+                    <input type="phone" class="ml-3 w-full" class="inline-block" placeholder="phone" />
+                  </div>
+                  <div class="flex my-1">
+                    <label for="email">Email</label>
+                    <input type="email" class="ml-3 w-full" placeholder="email" />
+                  </div>
+                </div>
+                <div class="py-1">
+                  <label for="cars">PURPOSE OF INQUIRY:</label>
+                  <select name="cars" class="p-1" id="cars">
+                    <option value="volvo">COACHING</option>
+                    <option value="saab">5:00 – 5:30 PM</option>
+                    <option value="saab">5:30 – 6:00 PM</option>
+                    <option value="saab">6:00 – 6:30 PM</option>
+                  </select>
+                </div>
+                <div class="my-1">
+                  <p class="text-red font-normal text-xs">
+                    *CONDITIONS APPLICABLE*
+                  </p>
+                </div>
+                <div class="flex justify-end">
+                  <input type="submit" class="cursor-pointer" value="Submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="w-1/5">
+            <div class="inquiry-btn flex items-end justify-end my-inquiry-button px-2 ">
+              <button
+                class="sm:py-2 py-1 sm:text-xl text-base text-white my-5 sm:font-bold font-normal items-center rounded-3xl sm:px-6 px-3"
+                onclick="inquery1()">
+                inquiry
+              </button>
+            </div>
+            <div>
+              <p class="hamburger fixed p-1 cursor-pointer z-50 h-8 w-8 md:hidden">
+                <i class="fa-solid fa-bars menuIcon material-icons"></i>
+              </p>
+              <p class="hamburger fixed p-1 cursor-pointer h-8 w-8 md:hidden hidden">
+                <i class="closeIcon material-icons"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <ul
+          class="menu bg-gray-200 flex flex-col sm:px-12 px-6 md:hidden fixed top-0 z-40 left-0 right-0 bottom-0 text-white list-none">
+          <a href="./index.html" class="hidden title-font font-semibold items-center    md:mb-0 absalute">
+            <img src="/assest/img/Flying Bird International logo.png" class="hidden logo_img" />
+          </a>
+          <i class="fa-solid cross fa-xmark absolute text-2xl text-black"></i>
+          <div class="nav div mt-10 mx-4">
+            <li class="mb-2">
+              <a class="menuItem text-lg font-semibold light-color" href="./about.html">
+                About us
+                <div class="nav1"></div>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="menuItem text-lg font-semibold light-color" href="./testpreparation.html">
+                Test Preparation
+                <div class="nav1"></div>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="menuItem text-lg font-semibold light-color" href="./country.html">
+                Country
+                <div class="nav1"></div>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="menuItem text-lg font-semibold light-color" href="./contact.html">
+                Contact us
+                <div class="nav1"></div>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="max-w-6xl mx-auto"> 
+  <section class="body-font1">
+    <div class="w-full mx-auto flex sm:pl-18 px-2 pt-20 lg:flex-row flex-col items-center">
+          <ol class="list-disc  xl:ml-0 ml-8 mr-2 pt-20 xl:mr-0">
+            <li class="mt-0 text-left word-space light-color text-2xl  font-normal sm:leading-10 leading-8 ">
+              Flying Bird offers you adequate & appropriate guidance depending
+              on the student’s present caliber & familiarity with the English
+              Language.
+            </li>
+            <li class="mt-0 text-left word-space light-color text-2xl  font-normal sm:leading-10 leading-8">
+              We have bifurcated our agenda into 2 modules : <span
+                class="text-md text-2xl mt-0 dark-color font-extrabold rounded-md text-left font-medium ">
+                Basic
+              </span>
+              <span class="text-md text-2xl mt-0 dark-color font-extrabold rounded-md text-left font-medium">
+                Intermediate
+              </span>
+            </li>
+            <li class="mt-0 text-left word-space light-color text-2xl  font-normal sm:leading-10 leading-8">
+              IELTS, PTE, and TOEFL are English proficiency tests that are
+              conducted by various bodies to assess various skills of an
+              individual such as speaking, listening, writing, and reading.
+            </li>
+          </ol>
+    </div>
+  </section>
+
+ <div class="my-option max-w-6xl mx-auto px-2  lg:block mb-2">
+    <div class="flex justify-between sm:px-10 px-0 items-center text-center list-none">
+      <div
+        class="accordi-2 font-medium items-center leading-5  px-6 py-2 text-center text-xl"
+        id="ieltsdesc" onclick="IELTS()">
+        IELTS
+      </div>
+      <div
+        class="accordi-2 font-medium items-center  leading-5  px-6 py-2 text-center text-xl"
+        id="ptedesc" onclick="PTE()">
+        PTE
+      </div>
+      <div 
+        class="accordi-2 font-medium items-center  leading-5  px-6 py-2 text-center text-xl"
+        id="toefldesc" onclick="TOEFL()">
+        TOEFL
+      </div>
+    </div>
+  </div>
+
+  <!-- ################################################### Content ################################################################ -->
+
+  <section class="body-font mt-5">
+    <div class=" w-full mx-auto">
+      <div class="Scriptcontent col-rt-12 h-full">
+        <div class="content">
+          <div class="article js-sidebar-holder">
+            <div class="article-content-holder float-right md:py-10 md:pt-0 md:pb-0 slide-in from-right w-full">
+              <div class="article-content">
+                <!-- ###########################################  IELTS #######################################  -->
+                <div class="article-section ielts dark-color" id="IELTS">
+                  <div class="rounded-lg mt-10 mx-2">
+                        <img src="./assest/img/ielts-img.svg" class="rounded-image mx-auto" alt="">
+                  </div>
+                  <div class="md:flex flex flex-wrap my-flex-wrap sm:justify-between justify-center sm:pt-8 pt-4">
+                    <div class="selected-color">
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi"
+                        id="accordi" onclick="SpeakingIELTS()">
+                        Speaking
+                      </h3>
+                    </div>
+                    <div>
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="ieltslistening"
+                        onclick="ListeningIELTS()">
+                        Listening
+                      </h3>
+                    </div>
+                    <div>
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="ieltsreading"
+                        onclick="ReadingIELTS()">
+                        Reading
+                      </h3>
+                    </div>
+                    <div>
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="ieltswriting"
+                        onclick="WritingIELTS()">
+                        Writing
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="my-5 sm:px-5 px-2" id="speaking">
+                    <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> Speaking</h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div div class="sm:text-2xl text-md">
+                      <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                        <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                          The examination of this section is not on the same
+                          day asthe combined examination of Listening,
+                          Reading, and Writing.
+                        </li>
+                        <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                          This is a personal one-to-one interaction with an
+                          examiner of about 11-14 minutes.
+                        </li>
+                         <li class="mt-0 text-left font-semibold text-2xl dark-color ">
+                          The examination is divided into 3 parts:
+                        </li>
+                      </ol>                  
+                      <div class="pb-8">
+                        <ol class="ml-6">
+                          <li class="list-disc mt-0 text-left text-2xl font-normal">
+                            You will be asked a series of basic questions
+                            about your personal life such as yourself,
+                            your family, your hobbies, etc.
+                          </li>
+                          <li class="list-disc text-md mt-0 text-left text-2xl font-normal">
+                            You are given a CLUE CARD on which 1 subject
+                            is mentionedand you are asked to speak on that
+                            particular subject for about 2 minutesafter
+                            preparing for about 1 minute.
+                          </li>
+                          <li class="list-disc text-md mt-0 text-left text-2xl font-normal">
+                            You are asked some follow-up questions
+                            regarding your clue card and you are supposed
+                            to answer them.
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="sm:flex text-center justify-evenly ">
+                        <div class="pb-2">
+                          <button class="py-2 text-xl font-medium skill-req items-center rounded-3xl px-10 req-desc-btn"
+                            id="speackskill" onclick="speaking1()">
+                            Skills Required
+                          </button>
+                        </div>
+                        <div class="">
+                          <button class="py-2 text-xl skill-req font-medium items-center  rounded-3xl px-10 req-desc-btn"
+                            id="speackband" onclick="banddesc1()">
+                          Band Description
+                          </button>
+                        </div>
+                      </div>
+                      <div>
+                        <ol class="list-disc hidden pt-8 xl:ml-0 ml-8 mr-2  xl:mr-0" id="speaking123">
+                          <li class="text-md mt-0 text-left text-2xl font-normal"> 
+                            Confidence about speaking for yourself.
+                          </li>
+                          <li class="text-md mt-0 text-left text-2xl font-normal">
+                            Basic knowledge of sentence construction.
+                          </li>
+                          <li class="text-md mt-0 text-left text-2xl font-normal ">
+                            Ability to listen to the examiner carefully
+                            before startingyour answer.
+                          </li>
+                        </ol>
+                      </div>
+                      <div class=" pb-8 pt-8" id="banddesc123">
+                        <ol class="text-md mt-0 text-left font-medium xl:ml-0 ml-8 mr-2  xl:mr-0"> 
+                          <li class="no-underline  text-2xl list-disc font-semibold">PRONUNCIATION:</li>
+                          <div class="px-6">
+                            <li class="list-disc mt-0 mr-0 text-left light-color text-2xl font-normal">your MOTHER
+                              TONGUE INFLUENCE should not be seen in your speech during the examination.</li>
+                          </div>
+                        </ol>
+                        <ol class="text-md mt-0 text-left font-medium xl:ml-0 ml-8 mr-2  xl:mr-0"> 
+                          <li class="no-underline list-disc text-2xl font-semibold">FLUENCY& COHERENCE:</li>
+                          <div class="px-6">
+                            <li class="mt-0 mr-0 text-left list-disc light-color text-2xl font-normal">Your speech
+                              should be fluent and without hesitations& your ideas are related to the questions asked by
+                              the examiner.</li>
+                          </div>
+                        </ol>
+                        <ol class="text-md mt-0 text-left font-medium xl:ml-0 ml-8 mr-2  xl:mr-0"> 
+                          <li class="no-underline list-disc text-2xl font-semibold">GRAMMATICAL RANGE AND ACCURACY:</li>
+                          <div class="px-6">
+                            <li class="mt-0 mr-0 text-left list-disc light-color text-2xl font-normal">your
+                              sentence construction in your speech is grammatically accurate and you usea wide range of
+                              complex and compound structures.</li>
+                          </div>
+                        </ol>
+                        <ol class="text-md mt-0 text-left font-medium xl:ml-0 ml-8 mr-2  xl:mr-0">
+                          <li class="no-underline list-disc text-2xl font-semibold">LEXICAL RESOURCES:</li>
+                          <div class="px-6">
+                            <li class=" mt-0 mr-0 text-left list-disc light-color text-2xl font-normal">you use a
+                              wide range of vocabulary in your speech.</p>
+                          </div>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="my-5 sm:px-5 px-0 hidden" id="listening">
+                    <div class="flex items-center sm:w-1/2 w-full  mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> Listening</h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div class="text-xl">
+                      <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                        <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                          It is 30 minutes test in which you have to listen
+                          to a foreign accent conversation and answer the
+                          questions related to that conversation.
+                        </li>
+                        <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                          There are 40 questions to answer.
+                        </li>
+                        <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                          Each question carries 1 mark.
+                        </li>
+                        <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                          You are given extra 10 minutes to transfer your
+                          answers to your answer sheet.
+                        </li>
+                      </ol>
+                      <div class="relative mx-8 overflow-x-auto pb-6 mt-10">
+                        <table class="w-8/12 mx-auto text-sm text-center text-gray-500 dark:text-gray-400">
+                          <thead class="text-xl text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-sm font-semibold light-color">
+                                CORRECT ANSWERS
+                              </th>
+                              <th class="border-2 border_ md:text-2xl  text-sm font-semibold  light-color">BAND SCORE
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="text-blue-900">
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color w-5/12">39-40
+                              </th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color w-5/12">9</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">37-38</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">8.5</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">35-36</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">8</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">32-34</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">7.5</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">30-31</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">7</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">26-29</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">6.5</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">23-25</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">6</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">18-22</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">5.5</th>
+                            </tr>
+                            <tr>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">16-17</th>
+                              <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">5</th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <div class="w-full text-center">
+                          <button class="py-2 text-xl  skill-req  mt-10 mb-10 font-medium items-center rounded-3xl px-10 req-desc-btn"
+                            id="listskill" onclick="listskillbutton()">
+                            Skills Required
+                          </button>
+                        </div>
+                        <div class="">
+                          <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0" id="listskillbutton">
+                            <li class="text-md mt-0  text-2xl font-normal list-disc light-color">
+                              Focus and concentration
+                            </li>
+                            <li class="text-md mt-0 t text-2xl font-normal list-disc light-color"> 
+                              Ability to catch up on British accent.
+                            </li>
+                            <li class="text-md mt-0  text-2xl font-normal list-disc light-color">
+                              Basic knowledge of sentence construction
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="my-5  hidden sm:px-5 px-0" id="reading">
+                    <div class="flex items-center sm:w-1/2 w-full my-8 mx-auto">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> Reading</h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                      <div>
+                        <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                          <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                            This is 60 minutes examination in which you are
+                            required to read content and answer
+                            corresponding questions.
+                          </li>
+                          <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                            A total of 40 questions are to be answered.
+                          </li>
+                          <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                            Each question carries 1 mark.
+                          </li>
+                          <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                            The structure of this test slightly varies in
+                            ACADEMIC and GENERAL TRAINING MODULE in terms of
+                            band calculation and level of difficulty.
+                          </li>
+                          <li class="mt-0 text-left text-2xl font-normal  dark-color list-disc">
+                            <strong > ACADEMIC : </strong>This module contains about 3 passages,
+                            each carrying 13-14 questions.
+                          </li>
+                          <li class="mt-0 text-left text-2xl font-normal  dark-color list-disc">
+                            <strong>GENERAL TRAINING:</strong> This module contains about 5
+                            passages.
+                          </li>
+                          <li class="mt-0 text-left text-2xl font-normal  dark-color list-disc">
+                            <strong>
+                              BAND DESCRIPTORS FOR ACADEMIC MODULE:
+                            </strong>
+                          </li>
+                        </ol>  
+                        <div class="relative w-full mx-auto  sm:rounded-lg">
+                            <div class="relative w-8/12 mx-auto my-10 overflow-x-auto">
+                              <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
+                                <thead class="text-xl text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-sm font-semibold light-color">
+                                      CORRECT ANSWERS
+                                    </th>
+                                    <th class="border-2 border_ md:text-2xl  text-sm font-semibold  light-color">BAND
+                                      SCORE
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-blue-900">
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color w-5/12">
+                                      39-40
+                                    </th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color w-5/12">9
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">37-38</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">8.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">35-36</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">8</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">32-34</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">7.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">30-31</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">7</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">26-29</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">6.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">23-25</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">6</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">18-22</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">5.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">16-17</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">5</th>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          <div>
+                            <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                              <li class="mt-0 text-left text-2xl font-normal  dark-color list-disc">
+                                <strong>
+                                   BAND DESCRIPTORS FOR GENERAL TRAINING MODULE:
+                                </strong>
+                              </li>
+                            </ol>
+                            <div class="relative w-8/12 mx-auto overflow-x-auto pb-6 mt-10">
+                              <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
+                                <thead class="text-xl text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-sm font-semibold light-color">
+                                      CORRECT ANSWERS
+                                    </th>
+                                    <th class="border-2 border_ md:text-2xl  text-sm font-semibold  light-color">BAND
+                                      SCORE
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-blue-900">
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color w-5/12">
+                                      39-40
+                                    </th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color w-5/12">9
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">37-38</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">8.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">35-36</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">8</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">32-34</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">7.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">30-31</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">7</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">26-29</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">6.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">23-25</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">6</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">18-22</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">5.5</th>
+                                  </tr>
+                                  <tr>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">16-17</th>
+                                    <th class="border-2 border_ md:text-2xl  text-md font-normal  light-color">5</th>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="text-center">
+                              <button
+                                class="py-2 text-xl skill-req mt-10 mb-10 font-medium items-center rounded-3xl px-10 req-desc-btn"
+                                id="readskill" onclick="readskillbutton()">
+                                Skills Required
+                              </button>
+                            </div>
+                            <div>
+                              <ol class="text-xl list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0"  id="readskillbutton">
+                                <li class="mt-0 text-left text-2xl font-normal  light-color list-disc">
+                                  Focus and concentration.
+                                </li>
+                                <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                                  Proper utilization of given time.
+                                </li>
+                                <li class="mt-0 text-left text-2xl font-normal  light-color list-disc"> 
+                                  Ability to skim content to understand the
+                                  basic essence of given content.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="my-5 hidden sm:px-5 px-0 " id="writing">
+                    <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> Writing</h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div class="">
+                        <ol class="text-2xl my-2 font-semibold pb-6 list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0"> 
+                          <li class="list-disc">
+                            The examination is divided into 3 parts
+                          </li>
+                          <div>                           
+                             <li class="list-disc mt-0 mr-0 text-left light-color text-2xl font-normal">
+                              Graph Writing / Letter Writing
+                             </li>
+                            <li class="list-disc mt-0 text-left light-color text-2xl font-normal">
+                              Essay Writing
+                            </li>
+                          </div>
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc"> 
+                            For the GENERAL TRAINING module, graph writing
+                            is replaced by LETTER WRITING.
+                          </li>
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc"> 
+                            In Graph Writing, either of graphs, charts,
+                            tables, or diagrams, is given and you have to
+                            analyze and comprehend the given data and
+                            summarize it in aThe candidate uses a wide range
+                            of vocabulary across his sentence construction
+                            in his writing. minimum of 150 words.
+                          </li>
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc"> 
+                            In letter writing, you have to write a formal or
+                            informal letter on a given situation in about a
+                            minimum of 150 words.
+                          </li>
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc"> 
+                            In essay writing, one subject is given to you
+                            and you have to write an essay on that
+                            particular topic in a minimum of 250 words.
+                          </li>
+                        </ol>
+                      <div class="sm:flex text-center justify-evenly ">
+                        <div class="pb-2">
+                          <button
+                            class="py-2 text-xl pb-2 sm:mt-10 sm:mb-10 font-medium skill-req items-center rounded-3xl px-10 req-desc-btn"
+                            id="writeskill" onclick="writeskillbutton()">
+                            Skills Required
+                          </button>
+                        </div>
+                        <div class="pb-2">
+                          <button
+                            class="p-2 text-xl pb-2 sm:mb-10 sm:mt-10 skill-req font-medium items-center rounded-3xl px-10 req-desc-btn"
+                            id="writeband" onclick="writebandbutton()">
+                            Band Description
+                          </button>
+                        </div>
+                      </div>
+                      <div>
+                        <ol class="text-lg list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0" id="writeskillbutton">
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc">
+                            Proper understanding of the given task.
+                          </li>
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc">
+                            Comprehension skills.
+                          </li>
+                          <li class="mt-0 text-left light-color text-2xl font-normal list-disc">
+                            Appropriate time distribution to complete
+                            both the tasks in a given time.
+                          </li>
+                        </ol>
+                      </div>
+                      <div>
+                        <ol class="list-disc list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0" id="writebandbutton">
+                          <div class="text-md mt-0 text-left font-medium mt-5">
+                            <li class="text-2xl  font-semibold no-underline list-disc"> TASK ACHIEVEMENT:
+                            </li>
+                            <div>
+                              <ol class="text-lg px-6">
+                                <li class="mt-0 text-left list-disc light-color text-2xl font-normal ">
+                                  To what extent, ideas written in an
+                                  essay are related to a given
+                                  topic/subject.
+                                </li>
+                                <li class="mt-0 text-left list-disc light-color text-2xl font-normal ">
+                                  No points are left unaddressed.
+                                </li>
+                                <li class="mt-0 text-left light-color text-2xl font-normal list-disc">
+                                  Nothing extra is written which is not
+                                  related to the given topic.
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                          <div class="text-md text-left font-medium">
+                            <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                              <li class="text-2xl  list-disc font-semibold no-underline"> COHERENCE &
+                              COHESION:</li>
+                            </ol>
+                            <div>
+                                <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                                  <li class="text-lg mt-0 text-left light-color text-2xl font-normal">
+                                    <strong>COHESION: </strong> Various elements of an essay are
+                                    integrated in the best possible way.
+                                  </li>
+                                </ol>
+                            </div>
+                            <div>
+                              <div class="">
+                                <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                                  <li class="text-lg mt-0 text-left light-color text-2xl font-normal">
+                                    <strong> COHERENCE: </strong> Ideas presented in an essay have the
+                                    appropriate and logical direction of
+                                    thought.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+                          <ol class="text-md mt-0 text-left font-semibold ">
+                            <li class="text-2xl list-disc font-semibold no-underline"> GRAMMATICAL RANGE
+                              &
+                              ACCURACY:</li>
+                              <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                                
+                                  <li class="text-lg list-disc  text-left light-color text-2xl font-normal">
+                                    Sentence construction in the
+                                    candidate’s writing is grammatically
+                                    accurate and the candidate uses a wide
+                                    range of compound and complex
+                                    structures.
+                                  </li>
+                               
+                              </ol>
+                          </ol>
+                          <div class="text-md mt-0 text-left font-medium ">
+                            <li class="text-2xl list-disc font-semibold no-underline">LEXICAL RESOURCES:
+                            </li>
+                              <ol class="list-disc">
+                                <div class="px-6">
+                                 <li  class="text-lg mt-0 text-left light-color text-2xl font-normal">
+                                   The candidate uses a wide range of
+                                   vocabulary across his sentence
+                                    construction in his writing.
+                                 </li>
+                                </div>
+                              </ol>
+                          </div>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ############################################## PTE Section ##################################  -->
+                <div class="article-section mt-7 tabcontent hidden" id="PTE">
+                  <div class="px-5">
+                    <div class=" my-10">
+                      <img src="./assest/img/pte-img.svg" class=" mx-auto" alt="">
+                    </div>
+                    <div class="md:flex flex flex-wrap my-flex-wrap justify-evenly">
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="ptespeack" onclick="SpeakingPTE()">
+                        Speaking
+                      </h3>
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="ptelist" onclick="ListeningPTE()">
+                        Listening
+                      </h3>
+                      <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="pteread" onclick="ReadingPTE()">
+                        Reading
+                      </h3>
+                    </div>
+                    <div class="hidden" id="listening1">
+                      <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                        <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                        <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> PTE Listening</h3>
+                        <span class="flex-grow border-line-right bg-gray-400"></span>
+                      </div>
+                      <div class="">
+                        <ol>
+                          <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                            It is 30 -43 minutes in duration and it contains 8 different question types which are described as follows:
+                          </li>
+                        </ol>
+                        <div>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              SUMMARIZE SPOKEN TEXT :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                In this section, you have to listen to a prompt of 60-90 seconds and after the machine has stopped recording, you have to write a summary of the prompt you just listened to in about 50-70 words. 10 minutes are given to write your response.
+                              </li>
+                            </div>
+                          </ol>
+                           <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              MULTIPLE CHOICE MULTIPLE ANSWERS:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                You have to listen to the prompt for about 30 – 90 seconds. You have to choose the correct summary from the given options according to the conversation played.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              FILL IN THE BLANKS :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                A transcript is given related to the conversation to be played and you have to identify the missing word from the conversation.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              HIGHLIGHT CORRECT SUMMARY :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                You have to listen to the prompt for about 30 – 90 seconds. You have to choose the correct summary from the given options according to the conversation played.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              MULTIPLE CHOICE SINGLE ANSWER :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                After listening to the conversation you have to select the suitable option according to the conversation from the given options.
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              SELECT MISSING WORD :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                A prompt of about 30 -90 seconds is played and a transcript of the same conversation is given to you. Some words in the transcript are missing and you have to identify those words from the conversation and write  Pearson Test of English (PTE) is a COMPUTER-based examination widely accepted by foreign universities and colleges for abroad study and immigration. them.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              HIGHLIGHT INCORRECT WORDS :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                In this section transcript of the recording to be played is given and some words in this transcript are wrongly placed. You have to highlight those wrong words.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              WRITE FROM DICTATION:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                In this section, you will hear a sentence for about 3-5 seconds. You have to correctly write the same sentence in the answer box.
+                              </li>
+                            </div>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hidden" id="reading1">
+                      <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                        <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                        <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> PTE Reading
+                        </h3>
+                        <span class="flex-grow border-line-right bg-gray-400"></span>
+                      </div>
+                      <div class="">
+                        <ol>
+                          <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                            This section is 30 minutes long and contains 5 different question types which are described as follows:
+                          </li>
+                        </ol>
+                        <div>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              FILL IN THE BLANKS:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                A paragraph is given with several gaps in between them. To fill that gap you are given a drop-down menu consisting of several options and you have to select the appropriate option among them according to the context of the given text.
+                              </li>
+                            </div>
+                          </ol>
+                           <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              MULTIPLE CHOICE MULTIPLE ANSWERS:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                A paragraph is given to you and several options are given, corresponding to the passage, you have to select all the correct options from the given options.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              REORDER PARAGRAPHS:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                You are given several parts of one passage in random order. You have to arrange them in the correct order according to the context of a passage.
+                              </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              FILL IN THE BLANKS:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                This section is quite similar to the previous section; just the change is instead of a drop-down menu in each gap, a collection of words is given at the bottom of the passage and you have to select the appropriate word from those words and fill the given gap.
+                                  </li>
+                            </div>
+                          </ol>
+                          <ol>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              MULTIPLE CHOICE SINGLE ANSWER :
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                                After reading the passage given, you have to choose one correct option among the varied given options.
+                              </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hidden" id="speaking1">
+                      <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                        <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                        <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> PTE Speaking & Writing
+                        </h3>
+                        <span class="flex-grow border-line-right bg-gray-400"></span>
+                      </div>
+                      <ol class="list-disc  xl:ml-0 ml-8 mr-2  xl:mr-0">
+                        <li class="mt-0 text-left text-2xl font-normal light-color ">
+                          Pearson Test of English (PTE) is a COMPUTER-based
+                          examination widely accepted by foreign universities
+                          and colleges for abroad study and immigration.
+                        </li>
+                        <li class="mt-0 text-left text-2xl font-normal light-color ">
+                          It consists of 4 independent modules namely
+                          Listening, Reading, Speaking, and Writing.
+                        </li>
+                        <li class="mt-0 text-left text-2xl font-normal light-color "> Here the independent tasks are designed in such a
+                          way as to evaluate multiple skills in a particular
+                          task.
+                        </li>
+                        <div>
+                          <div>
+                            <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                              The examination structure is as follows:
+                            </li>
+                          </div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              Part 1: SPEAKING & WRITING
+                            </li>
+                            <div class="px-6">
+                            <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                              It is 54- 67 minutes in duration.
+                            </li>
+                            <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                              It contains 7 different question types.
+                            </li>
+                            <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                              It is the longest section of the test
+                            </li>
+                            <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                              7 different types of questions are as follows:
+                            </li>
+                          </div>
+                          <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                            PERSONAL INTRODUCTION:
+                          </li>
+                          <div class="px-6">
+                            <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                              This is an opportunity given to you to create
+                              your first impression. You have to give your
+                              basic details in this section. This section is
+                              not scored but it is sent to institutions where
+                              you wish to study along with your report. You
+                              are given 25 seconds to prepare and further 30
+                              seconds to record your answer.
+                            </li>
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              READ ALOUD:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                You have to read the text which appears on the
+                                screen. Text is up to 60 words. Skills assessed
+                                in this part are speaking and reading.
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              REPEAT SENTENCE:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                After listening to a sentence you have to speak
+                                the same sentence. The recording ofsentences by
+                                machine is between 3 to 9 seconds. You have to
+                                record your response in 15 seconds. Skills
+                                assessed in this part are listening and
+                                speaking.
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              DESCRIBE IMAGE:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                An image appears on screen and you have to
+                                describe the given image in your own words in
+                                about 40 seconds. The skill assessed in this
+                                part is speaking.
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              RETELL LECTURE:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                After listening to a lecture of about 90 seconds
+                                you have to paraphrase the lecture in 40
+                                seconds. Skills assessed in this module are
+                                Listening and speaking.
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              ANSWER SHORT QUESTION:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                After listening to a question, answer the same
+                                with a single word or group of words in 10
+                                seconds. Skills assessed in this part are
+                                listening and speaking.
+                              </li>
+                            </div>  
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              SUMMARIZE WRITTEN TEXT
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                After reading a passage you have to write a
+                                summary of that passage in one sentence. Usage
+                                of complex structures is required. Text is up to
+                                300 words and 10 minutes are given to write your
+                                answer. Skills assessed in this part are
+                                speaking and writing.
+                              </li>
+                            </div>
+                          </div>
+                          <div>
+                            <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                              ESSAY WRITING:
+                            </li>
+                            <div class="px-6">
+                              <li class="mt-0 text-left text-2xl font-normal light-color"> 
+                                You have to write an essay on a given subject in
+                                between 200 to 300 words in 20 minutes.
+                              </li>
+                            </div>
+                          </div>
+                        </div>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ############################## TOEFL ############################## -->
+                <div class="article-section hidden mt-7 tabcontent" id="TOEFL" >
+                  <div class=" my-10">
+                    <img src="./assest/img/toefl-img.svg" class=" mx-auto" alt="">
+                  </div>
+                  <div class="md:flex flex flex-wrap my-flex-wrap  justify-evenly sm:pt-8 pt-4">
+                    <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="toeflspeack"
+                      onclick="SpeakingTOEFL()">
+                      Speaking
+                    </h3>
+                    <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="toefllist"
+                      onclick="ListeningTOEFL()">
+                      Listening
+                    </h3>
+                    <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="toeflread"
+                      onclick="ReadingTOEFL()">
+                      Reading
+                    </h3>
+                    <h3 class="text-xl mx-2 border-4 light-color my-2 text-center px-6 py-2 accordi" id="toeflwrite"
+                      onclick="WritingTOEFL()">
+                      Writing
+                    </h3>
+                  </div>
+
+                  <div class="hidden" id="reading2">
+                    <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> READING SECTION:
+                      </h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div class="px-5">
+                      <ol>
+                        <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                          It includes 3 to 4 reading comprehension passages followed by a set of 10 questions per passage. Each passage is about 700 words long. The types of questions asked in the section are as follows:                        </li>
+                      </ol>
+                      <div>
+                        <ol class="list-disc text-lg px-6">
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Factual and non-factual information
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Inference and rhetorical
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Reading vocabulary
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Sentence simplification
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Insert text
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Prose summary
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden" id="listening2">
+                    <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> LISTENING SECTION:
+                      </h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div class="px-5">
+                      <ol>
+                        <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                          The candidate will come across recorded English lectures and conversations.
+                        </li>
+                      </ol>
+                      <div>
+                        <ol class="list-disc text-lg px-6">
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Listening lectures : 3 -4
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Each lecture duration : 3-5 min
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Number of questions per lecture: 6
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Listening conversation: 2-3
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Each conversation length: 3 min
+                          </li>
+                          <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                            Number of questions per lecture: 5
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden" id="speaking2">
+                    <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2"> SPEAKING SECTION:
+                      </h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div class="px-5">
+                      <ol>
+                        <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                          This section is subdivided into two subtasks. 
+                        </li>
+                      </ol>
+                      <div>
+                        <ol>
+                          <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                            TASK 1 : Independent Task
+                          </li>
+                          <div class="px-6">
+                            <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                              In this section, a candidate is required to speak and express one’s personal opinion on a familiar topic.
+                            </li>
+                          </div>
+                        </ol> 
+                        <ol>
+                          <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                            TASK 2 : Integrated speaking task
+                          </li>
+                          <div class="px-6">
+                            <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                              Questions 2 – 4 are related to campus situations and course topics. You are given 15 – 30 seconds to prepare for your answer and you have to speak for 45-60 seconds for each question.
+                            </li>
+                          </div>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden" id="writing2">
+                    <div class="flex items-center sm:w-1/2 w-full mx-auto my-8">
+                      <span class="flex-grow border-line-left  bg-gray-400"></span> 
+                      <h3 class="text-4xl font-medium text-center light-color pb-2  mx-2">  WRITING SECTION:</h3>
+                      <span class="flex-grow border-line-right bg-gray-400"></span>
+                    </div>
+                    <div class="px-5">
+                      <ol>
+                        <li class="mt-0 text-left font-bold text-2xl list-disc dark-color ">
+                          This section is also divided into two subtasks.
+                        </li>
+                      </ol>
+                      <div>
+                        <ol>
+                          <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                            TASK 1 : INTEGRATED WRITING TASK.
+                          </li>
+                          <div class="px-6">
+                            <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                              In this section, a candidate has to listen to a short recording and read a short passage. After that one has to write the response based on information presented in the passage and the recording in 20 minutes.                            </li>
+                          </div>
+                        </ol>
+                        <ol>
+                          <li class="text-2xl  mt-2 font-semibold list-disc dark-color">
+                            TASK 2 : INDEPENDENT WRITING TASK.
+                          </li>
+                          <div class="px-6">
+                            <li class="mt-0 list-disc text-left text-2xl font-normal light-color"> 
+                              In this task, a candidate is asked to write an essay on a given subject based on their knowledge and experience in 30 minutes.
+                            </li>
+                          </div>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+<footer class="body-font mt-5 w-full mx-auto">
+  <div class=" mx-auto">
+    <div class="w-full relative flex justify-between flex-row px-4 pt-4 footer">
+      <div class="ml-0 w-1/3 text-center">
+        <h2 class="title-font font-bold  m-2">
+          <strong>FLYING BIRD</strong>
+          INTERNATIONAL
+        </h2>
+        <p class="mt-2 text-lg">
+          1036-37-38, 3rd Floor,
+          West Field Shopping Center, <br>
+          Opp. Surya Kiran Copmlex,
+          Ghod Dod Road, City-Surat
+        </p>
+        <p class="text-lg">
+          Pincode
+          - 395007, State-Gujarat, India.
+        </p>
+      </div>
+      <div class="1/3">
+        <img class="w-96 h-32" src="./assest/img//Flying Bird International logo.png" alt="">
+      </div>
+
+      <div class="ml-0 w-1/3 flex flex-col justify-center  items-center">
+        <div>
+          <div class="flex items-center">
+            <i
+              class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center">
+              :
+            </i>
+            <a href="tel:+91 99798 48781 " class="leading-relaxed text-lg text-black ml-2">
+              +91 99798 48781
+            </a>
+          </div>
+          <div class="flex items-center">
+            <i
+              class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center">
+              :
+            </i>
+            <a href="tel:+91 99798 48782 " class="leading-relaxed text-lg text-black ml-2">
+              +91 99798 48782
+            </a>
+          </div>
+          <div class="flex items-center">
+            <i
+              class="fa-solid fa-phone title-font font-semibold tracking-widest text-base flex justify-center items-center">
+              :
+            </i>
+            <a href="tel:+91 99798 48783 " class="leading-relaxed text-lg text-black ml-2">
+              +91 99798 48783
+            </a>
+          </div>
+          <div class="flex  items-center">
+            <i
+              class="fa-solid fa-envelope title-font font-semibold tracking-widest text-base flex justify-center items-center">
+              :
+            </i>
+            <a href="mailto:flyingbirdsurat@gmail.com " class="text-black text-lg leading-relaxed ml-2">
+              flyingbirdsurat@gmail.com
+            </a>
+          </div>
+          <div class="my-2 mx-4 flex justify-between">
+            <img src="./assest/img/in.svg" alt="">
+            <img src="./assest/img/youtube.svg" alt="">
+            <img src="./assest/img/instagram.svg" alt="">
+            <img src="./assest/img/facebook.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="text-sm text-center py-2 footer-bg">
+      © 2022 FLYING BIRD —
+      <a class="ml-1" target="_blank" rel="noopener noreferrer">
+        @flyingbirdsurat
+      </a>
+    </p>
+  </div>
+</footer>
+  <script src="/assest/js/index.js "></script>
+  <script src="/assest/js/testpreparation.js "></script>
+</body>
+
+</html>
+
+
